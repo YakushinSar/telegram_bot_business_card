@@ -15,6 +15,8 @@ def welcome(message):
 	markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 	item1 = types.KeyboardButton("🧡 Показать репозиторий GitHub")
 	item2 = types.KeyboardButton("😋 Написать в Telegram")
+	item3 = types.KeyboardButton("🧡 Показать своё резюме")
+
 
 	markup.add(item1, item2)
 
@@ -29,6 +31,8 @@ def lalala(message):
 			bot.send_message(message.chat.id, 'https://github.com/YakushinSar')
 		elif message.text == '😋 Написать в Telegram':
 			bot.send_message(message.chat.id, 'https://t.me/AndreyYakushinSar')
+		elif message.text == '🧡 Показать своё резюме':
+			bot.send_message(message.chat.id, 'https://drive.google.com/file/d/1sEmEBrTXDho7ovi9rqLp4lEjfMNUPsZn/view?usp=drive_link')
 		else:
 			bot.send_message(message.chat.id, 'Пока! Хорошего дня! 😢')
 
