@@ -18,7 +18,7 @@ def welcome(message):
 
 	markup.add(item1, item2)
 
-	bot.send_message(message.chat.id, "Привет, если ты QA то давай знакомиться, {0.first_name}!".format(message.from_user, bot.get_me()),
+	bot.send_message(message.chat.id, "{0.first_name} привет, если ты работаешь в сфере QA то давай знакомиться!".format(message.from_user, bot.get_me()),
 		parse_mode='html', reply_markup=markup)
 
 #назначаем действие для клавиатуры
