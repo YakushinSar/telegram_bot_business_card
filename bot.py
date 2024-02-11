@@ -13,8 +13,8 @@ def welcome(message):
 
 	#клавиатура
 	markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-	item1 = types.KeyboardButton("🧡 Мой репозиторий GitHub")
-	item2 = types.KeyboardButton("😋 Написать мне в Telegram")
+	item1 = types.KeyboardButton("🧡 Показать репозиторий GitHub")
+	item2 = types.KeyboardButton("😋 Написать в Telegram")
 
 	markup.add(item1, item2)
 
@@ -25,9 +25,9 @@ def welcome(message):
 @bot.message_handler(content_types=['text'])
 def lalala(message):
 	if message.chat.type == 'private':
-		if message.text == '🧡 Мой репозиторий':
+		if message.text == '🧡 Показать репозиторий GitHub':
 			bot.send_message(message.chat.id, 'https://github.com/YakushinSar')
-		elif message.text == '😋 Написать мне в личку':
+		elif message.text == '😋 Написать в Telegram':
 			bot.send_message(message.chat.id, 'https://t.me/AndreyYakushinSar')
 		else:
 			bot.send_message(message.chat.id, 'Пока! Хорошего дня! 😢')
