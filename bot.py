@@ -13,12 +13,12 @@ def welcome(message):
 
 	#клавиатура
 	markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-	item1 = types.KeyboardButton("🧡 Мой репозиторий")
-	item2 = types.KeyboardButton("😋 Написать мне в личку")
+	item1 = types.KeyboardButton("🧡 Мой репозиторий GitHub")
+	item2 = types.KeyboardButton("😋 Написать мне в Telegram")
 
 	markup.add(item1, item2)
 
-	bot.send_message(message.chat.id, "Привет тебе от краба, {0.first_name}!".format(message.from_user, bot.get_me()),
+	bot.send_message(message.chat.id, "Привет, если ты QA то давай знакомиться, {0.first_name}!".format(message.from_user, bot.get_me()),
 		parse_mode='html', reply_markup=markup)
 
 #назначаем действие для клавиатуры
@@ -26,11 +26,11 @@ def welcome(message):
 def lalala(message):
 	if message.chat.type == 'private':
 		if message.text == '🧡 Мой репозиторий':
-			bot.send_message(message.chat.id, 'https://github.com/AndreyRyadnovQA')
+			bot.send_message(message.chat.id, 'https://github.com/YakushinSar')
 		elif message.text == '😋 Написать мне в личку':
-			bot.send_message(message.chat.id, 'https://t.me/And_reyyyyy')
+			bot.send_message(message.chat.id, 'https://t.me/AndreyYakushinSar')
 		else:
-			bot.send_message(message.chat.id, 'Не знаю что ответить😢')
+			bot.send_message(message.chat.id, 'Пока! Хорошего дня! 😢')
 
 
 bot.polling(none_stop=True)
